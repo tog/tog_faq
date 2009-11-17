@@ -1,0 +1,25 @@
+<h1><%= I18n.t("tog_faq.views.admin.categories") %></h1>
+
+<p><%= link_to I18n.t("tog_faq.views.admin.new_category"), new_admin_faqs_faq_category_url, {:class=>"button mainaction add", :title => I18n.t("tog_faq.views.admin.add_category")} %></p>
+
+
+<table class="tableE">
+  <thead>
+    <tr>
+      <th scope="col"><%= I18n.t("tog_faq.views.admin.name") %></th>
+      <th scope="col"><%= I18n.t("tog_faq.views.admin.questions") %></th>
+      <th scope="col"><%= I18n.t("tog_faq.views.admin.active_questions") %></th>
+      <th scope="col"><%= I18n.t("tog_faq.views.admin.enabled") %></th>
+    </tr>
+  </thead> 
+  <tbody>
+    <% @faq_categories.each do |fc| %>
+    <tr<%= cycle('',' class="pair"') -%>>
+      <td><%= link_to fc.name, edit_admin_faqs_faq_category_url(fc), {:class => "admin", :title => I18n.t("tog_faq.views.admin.edit_category")} -%></td>
+      <td><%= fc.faqs.size %></td>
+      <td><%= fc.faqs.active.size %></td>
+      <td><%= fc.enabled? ? I18n.t("tog_faq.views.admin.enabled_true") : I18n.t("tog_faq.views.admin.enabled_false") -%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

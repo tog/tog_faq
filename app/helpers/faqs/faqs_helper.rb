@@ -1,0 +1,5 @@
+module Faqs::FaqsHelper
+
+
+
+end

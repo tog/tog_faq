@@ -1,0 +1,17 @@
+<h1><%= link_to I18n.t("tog_faq.views.admin.categories"), admin_faqs_faq_categories_url%> / <%= link_to @faq_category.name, edit_admin_faqs_faq_category_path(@faq_category)%></h1>
+
+<p><%= link_to I18n.t("tog_faq.views.admin.remove_category"), admin_faqs_faq_category_url(@faq_category), :method => :delete, :confirm => I18n.t("tog_faq.views.admin.remove_category_confirmation"), :class=>"button mainaction delete", :title => I18n.t("tog_faq.views.admin.remove_category") %></p>
+
+
+<%= error_messages_for :faq_category %>
+<% form_for @faq_category, :url => {:action => :update},  :html => {:id => "edit_category"} do |f| -%>
+
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <br />  
+  <div class="actions">
+    <%= submit_tag I18n.t("tog_faq.views.admin.update"), {:accesskey => "s", :class=>"button"} %>
+  </div>
+    
+<% end -%>
+
+<%= render :partial => '/admin/faqs/faqs/index', :locals => {:faq_category => @faq_category, :faqs => @faq_category.faqs}%>

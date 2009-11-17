@@ -1,0 +1,46 @@
+es:
+  interface:
+    site:
+      faq: "FAQ"
+    admin:
+      faq: "FAQ"
+  tog_faq:
+    admin:
+      controllers:
+        category_created: Categoría creada con éxito
+        category_updated: Categoría actualizada con éxito
+        category_deleted: Categoría eliminada con éxito 
+        category_deletion_error: An error has ocurred
+        faq_created: FAQ creada con éxito
+        faq_updated: FAQ actualizada con éxito
+        faq_deteled: FAQ eliminada con éxito
+    views:
+      admin:
+        faq: FAQ
+        title: Título
+        body: Cuerpo
+        category: Categoría
+        enabled: Activa
+        faqs: FAQs
+        new_faq: Nueva FAQ     
+        categories: Categorías
+        create: Crear
+        remove_faq: Eliminar FAQ
+        remove_faq_confirmation: "¿Estás seguro de querer eliminar esta FAQ?"
+        edit_faq: Editar FAQ
+        update: Actualizar
+        name: Nombre
+        description: Descripción
+        questions: Preguntas
+        active_questions: Preguntas activas
+        new_category: Nueva categoría
+        add_category: Añadir categoría
+        edit_category: Editar categoría
+        remove_category: Eliminar categoría
+        remove_category_confirmation: "¿Estás seguro de querer eliminar esta categoría?. Todas sus preguntas asociadas serán eliminadas también"
+        enabled_true: Si
+        enabled_false: No
+      public:
+        faq: FAQ
+        
+

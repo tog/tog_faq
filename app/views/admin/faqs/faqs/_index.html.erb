@@ -1,0 +1,23 @@
+<h1><%= I18n.t("tog_faq.views.admin.faqs") %></h1>
+
+<p><%= link_to I18n.t("tog_faq.views.admin.new_faq"), new_admin_faqs_faq_url(faq_category, :category => faq_category.id), {:class=>"button mainaction add", :title => I18n.t("tog_faq.views.admin.new_faq")} %></p>
+
+
+<table class="tableE">
+  <thead>
+    <tr>
+      <th scope="col"><%= I18n.t("tog_faq.views.admin.title") %></th>
+      <th scope="col"><%= I18n.t("tog_faq.views.admin.body") %></th>
+      <th scope="col"><%= I18n.t("tog_faq.views.admin.enabled") %></th>
+    </tr>
+  </thead> 
+  <tbody>
+    <% faqs.each do |f| %>
+    <tr<%= cycle('',' class="pair"') -%>>
+      <td><%= link_to f.title, edit_admin_faqs_faq_url(f), {:class => "admin", :title => I18n.t("tog_faq.views.admin.edit_faq")} -%></td>
+      <td><%= f.body %></td>
+      <td><%= f.enabled? ? I18n.t("tog_faq.views.admin.enabled_true") : I18n.t("tog_faq.views.admin.enabled_false") -%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

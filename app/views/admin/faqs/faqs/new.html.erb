@@ -1,0 +1,14 @@
+<h1><%= link_to I18n.t("tog_faq.views.admin.categories"), admin_faqs_faq_categories_url%> / <%= link_to @faq.faq_category.name, edit_admin_faqs_faq_category_path(@faq.faq_category)%> / <%= I18n.t("tog_faq.views.admin.new_faq") %></h1>
+
+<br />
+
+<%= error_messages_for :faq %>
+<% form_for @faq, :url => {:action => :create},  :html => {:id => "new_faq"} do |f| -%>
+
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <br />  
+  <div class="actions">
+    <%= submit_tag I18n.t("tog_faq.views.admin.create"), {:accesskey => "s", :class=>"button"} %>
+  </div>
+    
+<% end -%>

@@ -1,0 +1,16 @@
+<table class="tableE">
+  <caption><%= I18n.t("tog_faq.views.admin.category") %></caption>
+  <tbody>
+    <tr>
+        <th scope="row"><%= I18n.t("tog_faq.views.admin.name") %></th>
+        <td nowrap="nowrap"><%=f.text_field :name, :class=>"fieldbox" %></td>
+    </tr>
+    <tr>
+        <th scope="row"><%= I18n.t("tog_faq.views.admin.description") %></th>
+        <td nowrap="nowrap"><%=f.text_area :description, :class=>"fieldbox", :size => "60x6" %></td>
+    </tr>
+    <tr>
+        <th scope="row"><%= I18n.t("tog_faq.views.admin.enabled") %></th>
+        <td nowrap="nowrap"><%=f.check_box :enabled, :class=>"fieldbox" %></td>
+    </tr>          
+</tbody></table>

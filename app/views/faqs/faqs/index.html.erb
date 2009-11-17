@@ -1,0 +1,22 @@
+<div class="titleA round clearfix"><%= I18n.t("tog_faq.views.public.faq") %></div>
+<br>
+<div class="internal_padding">
+   <ul>
+   <% @faqs_categories.each do |fc| %>
+      <li><%= link_to fc.name, "##{fc.id}" %></li>
+   <% end %>
+   </ul>
+   
+   <hr />
+   
+   <% @faqs_categories.each do |fc| %>
+      <a name="<%=fc.id%>"></a>
+      <h2><%= fc.name %></h2>
+      <dl>
+      <% fc.faqs.active.each do |f| %>
+         <dt><%= f.title %></dt>
+         <dd><%= textilize f.body%></dd>
+      <% end %>
+      </dl>
+   <% end %>   
+</div> <!-- /.internal_padding -->

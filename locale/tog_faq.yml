@@ -1,0 +1,46 @@
+en:
+  interface:
+    site:
+      faq: "FAQ"
+    admin:
+      faq: "FAQ"
+  tog_faq:
+    admin:
+      controllers:
+        category_created: Category created successfully
+        category_updated: Category updated successfully
+        category_deleted: Category deleted successfully 
+        category_deletion_error: An error has ocurred
+        faq_created: FAQ created successfully
+        faq_updated: FAQ updated successfully
+        faq_deteled: FAQ deleted successfully
+    views:
+      admin:
+        faq: FAQ
+        title: Title
+        body: Body
+        category: Category
+        enabled: Enabled
+        faqs: FAQs
+        new_faq: New FAQ     
+        categories: Categories
+        create: Create
+        remove_faq: Remove FAQ
+        remove_faq_confirmation: "Are you sure you want to remove this FAQ?"
+        edit_faq: Edit FAQ
+        update: Update
+        name: Name
+        description: Description
+        questions: Questions
+        active_questions: Active Questions
+        new_category: New category
+        add_category: Add category
+        edit_category: Edit category
+        remove_category: Remove category
+        remove_category_confirmation: "Are you sure you want to remove this category?. All its associated questions will be also removed"
+        enabled_true: Yes
+        enabled_false: No
+      public:
+        faq: FAQ
+        
+

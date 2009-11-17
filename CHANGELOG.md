@@ -1,0 +1,4 @@
+Edge
+----
+
+* New plugin
