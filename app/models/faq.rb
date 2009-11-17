@@ -11,4 +11,8 @@ class Faq < ActiveRecord::Base
   
   validates_presence_of :title, :body, :faq_category_id
 
+  def self.site_search(query, search_options={})
+    Faq.active.find(:all, :conditions => ["body like ? or title like ?", "%#{query}%", "%#{query}%"])
+  end
+  
 end
