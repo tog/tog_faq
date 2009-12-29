@@ -3,7 +3,7 @@
 <div class="internal_padding">
    <ul>
    <% @faqs_categories.each do |fc| %>
-      <li><%= link_to fc.name, "##{fc.id}" %></li>
+      <li><%= link_to fc.name, {:anchor => fc.id} %></li>
    <% end %>
    </ul>
    
